@@ -4,19 +4,28 @@
         <meta charset="UTF-8">
         <title>logo fonts</title>
         <link href="https://fonts.googleapis.com/css?family=Aldrich|Allerta+Stencil|Audiowide|Bad+Script|Black+Ops+One|Calligraffitti|Charm|Cinzel|Cinzel+Decorative:400,900|Comfortaa|Fascinate|Faster+One|Finger+Paint|Geo|Geostar|Geostar+Fill|Iceland|Julius+Sans+One|Kelly+Slab|Luckiest+Guy|Marcellus|Megrim|Michroma|Montserrat+Subrayada:400,700|Orbitron|Passero+One|Permanent+Marker|Plaster|Poiret+One|Princess+Sofia|Raleway+Dots|Righteous|Rock+Salt|Sarpanch:700|Six+Caps|Sniglet|Snowburst+One|Stalinist+One|Syncopate|Varela+Round|Viga|Wallpoet|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-        
+
         <style>
-            h1{
-                font-size: 3em;
-                width: 300px;
-                height: 80px;
-                border: 1px solid black;
-                padding: 30px;
+            div{
+                width: 400px;
+                height: 120px;
+                border: 1px solid black;                
                 float: left;
-                color: #ec1928
+                color: #ec1928;
+                margin: 10px
             }
-        
-        
+            h1{
+                font-size: 3.5em;
+                margin: 0;
+                text-align: center;
+/*                padding-top: 20px*/
+            }
+            h3{
+                padding: 5px;
+                margin: 0;
+                float: left
+            }
+
         </style>
     </head>
 
@@ -24,13 +33,19 @@
         <script>
             const fonts = ["Six Caps","Kelly Slab","RalewayDots","Calligraffitti","Sniglet","Syncopate","Michroma","Cinzel Decorative",'Marcellus',"Julius Sans One","Rock Salt","Allerta Stencil","Bad Script","Luckiest Guy","Poiret One","Viga","Orbitron","Snowburst One","Permanent Marker", "Cinzel", "Comfortaa","Righteous","Varela Round","Geostar Fill","Fascinate","Geostar","Stalinist One","Passero One","Plaster","Geo","Sarpanch","Montserrat Subrayada","Princess Sofia","Finger Paint","ZCOOL KuaiLe","Iceland","Charm","Megrim","Wallpoet","Faster One","Black Ops One","Aldrich","Audiowide"]
 
-            fonts.map(font =>{
-//                console.log(font)
-                let h = document.createElement("H1");
-                let t = document.createTextNode("dowhop");
-                h.style.fontFamily = `${font}, sans-serif`;
-                h.appendChild(t);
-                document.body.appendChild(h);
+            fonts.map((font, i) =>{
+                //                console.log(font)
+                let d = document.createElement("div");
+                let h3 = document.createElement("H3");
+                let h1 = document.createElement("H1");
+                let t3 = document.createTextNode(i);
+                let t1 = document.createTextNode("dowhop");
+                h1.style.fontFamily = `${font}, sans-serif`;
+                h1.appendChild(t1);
+                h3.appendChild(t3);
+                d.appendChild(h3);
+                d.appendChild(h1);
+                document.body.appendChild(d);
             })
 
         </script>
